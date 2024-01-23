@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form</title>
+  <style>
+    form{
+      display: flex;
+      flex-direction: column;
+justify-content: center;
+    }
+    .inp{
+      display: block;
+      margin: 10px auto;
+      
+    }
+    div{
+      
+      display: flex;
+      justify-content: center;
+    }
+    .btn{
+      margin: 20px 30px;
+      display:inline-block;
+    }
+  </style>
+</head>
+<body>
+<form action="">
+ <label class="inp">
+   Name : <input type="text" name="name" id="name" value="" />
+ </label>
+ 
+ <label class="inp">
+   Mobile No : <input type="number" name="num" id="num" value="" />
+ </label>
+ 
+ <label class="inp">Email-Id : 
+   <input type="email" name="email" id="email" value="" />
+ </label>
+ <div>
+   
+
+ <label class="btn"><input type="button" onclick="Clr()" name="clr" id="clr" value="Clear" /></label>
+ <label class="btn"><input type="button" onclick="Sub()" name="sub" id="sub" value="Submit" /></label> </div>
+ 
+ 
+ <script>
+ 
+
+   function Clr(){
+     document.getElementById('email').value = "";
+     document.getElementById('num').value = "";
+     document.getElementById('name').value = "";
+   }
+   
+   function Sub(){
+     window.open(  "https://wa.me/919004877026?text=" +
+         'Name : ' + document.getElementById('name').value + '%0aMobile Number : ' + document.getElementById('num').value + '%0aEmail Id : ' + document.getElementById('email').value , '_blank').focus();
+   }
+   
+ </script>
+</form>
+</body>
+  </html
